@@ -44,7 +44,7 @@ st.title("📊 Crop Production Statistics in India")
 st.sidebar.title("Customize Your View")
 
 # Load dataset
-df = pd.read_csv("main_crops.csv")
+df = pd.read_csv("data/main_crops.csv")
 
 # Sidebar selector
 state_option = st.sidebar.selectbox(
@@ -165,7 +165,7 @@ if state_option != "All India":
         else:
             st.warning("No crop data for this season and year range.")
 
-    coconut_df = pd.read_csv("coconut_filtered.csv")
+    coconut_df = pd.read_csv("data/coconut_filtered.csv")
 
     selected_state=state_option
 
@@ -353,7 +353,7 @@ else:
 
 
     #coconut crop analysis
-    coconut_df = pd.read_csv("coconut_filtered.csv")
+    coconut_df = pd.read_csv("data/coconut_filtered.csv")
 
     # 1. Production trend over years
     st.subheader("📈 Coconut Production Trend Over Years")
